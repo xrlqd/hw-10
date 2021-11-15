@@ -1,0 +1,133 @@
+.two {
+	background: lightseagreen;
+}
+
+.head {
+	color: black;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
+
+.block {
+	width: 200px;
+	height: 200px;
+	background: green;
+	border-radius: 0px;
+	margin: 60px;
+	font-size: 20px;
+	opacity: 0.5;
+	transition: 1s;
+	animation: bob 4s ease infinite;
+
+	border: 4.5px;
+	border-style: solid;
+	animation: bborder 4s ease infinite;
+	animation: border 4s ease infinite;
+	box-shadow: 0px 0px 15px 7px blueviolet;
+	border-radius: 10px;
+}
+
+.nhead {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
+.block img {
+	border-radius: 10px;
+}
+
+.block span {
+	color: black;
+	display: flex;
+	align-items: flex-end;
+}
+
+.block:hover {
+	transform: scale(1.1);
+	animation: bob 0s ease none;
+}
+
+.hed {
+	transition: 1s;
+}
+
+.hed:hover {
+	transform: scale(1.05);
+	text-decoration: underline;
+}
+
+@keyframes border {
+	0% {
+		border-color: blue;
+	}
+	25% {
+		border-color: blueviolet;
+	}
+	50% {
+		border-color: purple;
+	}
+	75% {
+		border-color: blueviolet;
+	}
+	100% {
+		border-color: blue;
+	}
+}
+
+@keyframes bborder {
+	0% {
+		box-shadow: 0px 0px 15px 7px lime;
+	}
+	25% {
+		box-shadow: 0px 0px 15px 7px blue;
+	}
+	50% {
+		box-shadow: 0px 0px 15px 7px violet;
+	}
+	75% {
+		box-shadow: 0px 0px 15px 7px blue;
+	}
+	100% {
+		box-shadow: 0px 0px 15px 7px lime;
+	}
+}
+
+keyframes bob {
+	0% {
+
+	}
+	25% {
+		background: lime;
+	}
+	50% {
+		background: lightgreen;
+	}
+	75% {
+		background: lime;
+	}
+	100% {
+		background: green;
+	}
+}
+
+@keyframes bpp {
+
+}
+
+.hed::before {
+	content: '';
+	position: absolute;
+	background: yellowgreen;
+	width: 100%;
+	height: 8px;
+
+	transform: scaleX(0);
+	transition: 1s;
+}
+.hed:hover::before {
+	transform: scaleX(2);
+}
